@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Prime</title>
+  <script type="text/javascript">
+  function pri(){
+     var num=document.prime.numb.value;
+     var a = num/2;
+     if(num==1 || num==2 || num==3)
+     {
+         alert("Its a prime Number")
+     }
+
+     for(i=2;i<=a;i++)
+     {
+         if(num%i==0)
+         {
+            //alert("Its a prime number")
+            //break;
+            alert("Not a prime number")
+            break
+         }
+         else{
+             alert("Prime Number")
+         }
+     }
+     return false;
+  }
+  </script>
+</head>
+
+<body>
+       <form name="prime" action="" onsubmit="pri()">
+       Enter the number:<input type="number" name="numb">
+       <input type="submit" value="check">
+       </form>
+</body>
+
+</html>

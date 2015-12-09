@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>upperCase</title>
+  <script type="text/javascript">
+  function cas(){
+      var str=document.form1.stri.value;
+      //leng=str.length;
+
+      for(var i=0;i<1;i++)
+      {
+      if (str[i] == str[i].toLowerCase())
+      {
+          alert("This starts in lower case");
+          return false;
+      }
+      else{
+          alert("This is in uppercase");
+          return false;
+      }
+       }
+  }
+
+  </script>
+</head>
+
+<body>
+    <form name="form1" action="" onsubmit="return cas()">
+     <input type="text" name="stri">
+     <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Fahertocel</title>
+  <script type="text/javascript">
+  function calf(){
+      var fa=document.form1.faher.value;
+      var result=fa*1.8+32
+      document.getElementById("fh").innerHTML=result ;
+      return false;
+  }
+
+  function calc(){
+      var ca=document.form2.cels.value;
+      var result=ca-32/1.8
+      document.getElementById("ch").innerHTML=result;
+      return false;
+  }
+
+  </script>
+</head>
+
+<body>
+<nav>
+<form name="form1" action="" onsubmit="return calf()">
+<input type="number" name="faher">
+<input type="submit" value="fah">
+
+</form>
+<div id="fh">
+      <br><br>
+</div>
+</nav>
+<nav>
+<form name="form2" action="" onsubmit="return calc()">
+<input type="number" name="cels">
+<input type="submit" value="cel">
+
+</form>
+<div id="ch">
+      <br>
+      <br>
+</div>
+     </nav>
+</body>
+
+</html>

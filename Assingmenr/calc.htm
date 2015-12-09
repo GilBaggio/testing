@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Calculator</title>
+  <script type="text/javascript">
+      function add(){
+
+          var n1=document.cal.n1.value;
+          var n2=document.cal.n2.value;
+          var n3=parseInt(n1)+parseInt(n2);
+          document.getElementById("div").innerHTML=n3
+
+           return false;
+
+      }
+      function sub(){
+
+          var n1=document.cal.n1.value;
+          var n2=document.cal.n2.value;
+          var n3=parseInt(n1)-parseInt(n2);
+          document.getElementById("div").innerHTML=n3
+
+           return false;
+
+      }
+      function mul(){
+
+          var n1=document.cal.n1.value;
+          var n2=document.cal.n2.value;
+          var n3=parseInt(n1)*parseInt(n2);
+          document.getElementById("div").innerHTML=n3
+
+           return false;
+
+      }
+      function divi(){
+
+          var n1=document.cal.n1.value;
+          var n2=document.cal.n2.value;
+          var n3=parseInt(n1)/parseInt(n2);
+          document.getElementById("div").innerHTML=n3
+
+           return false;
+
+      }
+  </script>
+</head>
+
+<body>
+<form name="cal" action="" >
+<input type="number" name="n1"><br>
+<input type="number" name="n2"><br>
+<input type="submit" value="Add" onClick="return add()">
+<input type="submit" value="Sub" onClick="return sub()">
+<input type="submit" value="Multi" onClick="return mul()">
+<input type="submit" value="Divide" onClick="return divi()">
+</form>
+<div id="div">
+<br>
+
+</div>
+
+</body>
+
+</html>

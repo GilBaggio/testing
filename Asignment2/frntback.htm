@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Backfrnt</title>
+  <script type="text/javascript">
+  var sli=new Array();
+  sli[0]=new Image(200,200);
+  sli[0].src="flow1.jpg";
+  sli[1]=new Image(200,200);
+  sli[1].src="flow2.jpg";
+  sli[2]=new Image(200,200);
+  sli[2].src="flow3.jpg";
+  sli[3]=new Image(200,200);
+  sli[3].src="flow4.jpg";
+  var step=0;
+  </script>
+</head>
+
+<body>
+   <button id="b1" onclick="backward()">backward</button>&nbsp;&nbsp;&nbsp;
+<img src="flow1.jpg" width="200" height="200" id="img"/>
+
+<button onclick="forward()" id="far">forward</button>
+<script type="text/javascript">
+   if(step<=0){
+              document.getElementById("b1").disabled=true;
+          }
+function forward(){
+          step=step+1;
+          if(step>=0){
+              document.getElementById("b1").disabled=false;
+          }
+          document.getElementById('img').src=sli[step].src;
+          if(step==3){
+              document.getElementById("far").disabled=true;
+          }
+      }
+function backward(){
+
+
+          step=step-1;
+          if(step<=0){
+              document.getElementById("b1").disabled=true;
+          }
+          if(step<3){
+              document.getElementById("far").disabled=false;
+          }
+          document.getElementById('img').src=sli[step].src;
+      }
+
+</script>
+
+
+</body>
+
+</html>

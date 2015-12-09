@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Grade</title>
+  <script type="text/javascript">
+    function gradeCal(){
+        var mark=document.grade.mark.value;
+        if(mark<=100)
+        {
+            if(mark==100)
+            {   var grade="O grade";
+                document.getElementById("div").innerHTML=grade;
+
+            }
+            else if(mark<=99 && mark>90)
+            {
+                var grade="A grade";
+                document.getElementById("div").innerHTML=grade;
+
+            }
+            else if(mark<=89 && mark>80)
+            {
+                var grade="B grade";
+                document.getElementById("div").innerHTML=grade;
+
+            }
+            else if(mark<=79 && mark>60)
+            {
+                var grade="C grade";
+                document.getElementById("div").innerHTML=grade;
+
+            }
+            else if(mark<=59 && mark>50)
+            {
+                var grade="D grade";
+                document.getElementById("div").innerHTML=grade;
+
+            }
+            else
+            {
+                var grade="Fail";
+                document.getElementById("div").innerHTML=grade;
+
+            }
+
+
+
+        }
+        else{
+            alert("Please enter valid Mark")
+        }
+        return false;
+    }
+  </script>
+</head>
+
+<body>
+<form name="grade" action ="" onsubmit="return gradeCal()">
+<input type="Number" name="mark">
+<input type="submit" value="Calculate">
+
+</form>
+<div id="div">
+
+</div>
+
+</body>
+
+</html>

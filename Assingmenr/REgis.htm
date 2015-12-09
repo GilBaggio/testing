@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Registration</title>
+  <style type="text/css">
+  table{
+      background-color: #CC78BD;
+      size: fixed;
+  }
+
+  </style>
+  <script type="text/javascript">
+  function validage(){
+      var age=document.register.age.value;
+
+      if(age>18 && age<50){
+
+          return true;
+      }
+      else{
+          alert("Please enter age between 18-54");
+           return false;
+      }
+
+  }
+    function varchar(){
+    //Check the gender
+
+    if(document.register.gender.value == "female" || document.register.gender.value=="male" ){
+            var gen=document.register.gender.value;
+           // return true;
+        }
+
+        else {
+            alert("Please selct the gender");
+            return false;
+        }
+
+    //check the certification
+    var des=document.register.cert;
+    var count=0;
+
+    for(var i=0;i<des.length;i++)
+    {
+        if(des[i].checked){
+            count+=1;
+        }
+    }
+    if(count<1){
+
+        alert("Please Select Atleast One cetification")
+        return false;
+    }
+
+    }
+    var qual=document.register.qual.value;
+    if(qual=="NONE")
+    {
+        alert("Please Selct the Qualification");
+        return false;
+    }
+    else{
+        return true;
+
+    }
+
+
+  </script>
+</head>
+
+<body>
+<div>
+<form name="register" action="succ.htm" onsubmit="return varchar()" validate>
+<center>
+<table>
+<thead><center>REGISTRATION FORM</center></thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td><input type="text" name="pername" id="name" required="required" pattern="[a-zA-Z]{4,19}"/></td>
+</tr>
+<tr>
+<td>Age</td>
+<td><input type="number" name="age" id="age" maxlength="2" size="2" required="required" onchange="validage()"/></td>
+</tr>
+<tr>
+<td>QUALIFICATION</td>
+<td><select name="qual" required="required">
+<option value="NONE">NONE</option>
+<option value="UG">UG</option>
+<option value="PG">PG</option></select></td>
+</tr>
+<tr>
+<td>GENDER</td>
+<td>FEMALE<input type="radio" name="gender"  value="female"/><br>
+MALE<input type="radio" name="gender"  value="male"/></td>
+</tr>
+<tr>
+<td>CONTACT&nbsp;NUMBER</td>
+<td><input type="number" name="phne" id="phne" required="required" formmethod="number()"/></td>
+</tr>
+<tr>
+<td>ADDRESS</td>
+<td><textarea name="address" required="required"></textarea></td>
+</tr>
+<tr>
+<td>CERTIFICATION</td>
+<td>SCJP<input type="checkbox" name="cert" value="SCJP"/><br>ORACLE<input type="checkbox" name="cert" value="ORACLE"/></td>
+<td>SCWCD<input type="checkbox" name="cert" value="SCWCD"/></td>
+</tr>
+<tr>
+<td>PASSWORD</td>
+<td><input type="password" name="pass" id="pass" required="required" placeholder="Only alphabets and (_)"  pattern="[a-zA-Z_]{6,8}"/></td>
+</tr>
+<tr>
+<td><input type="submit" value="ADD DETAILS" /></td>
+<td><input type="reset" value="RESET"/></td>
+</tr>
+
+</tbody>
+
+</table>
+</center>
+</form>
+</div>
+
+</body>
+
+</html>

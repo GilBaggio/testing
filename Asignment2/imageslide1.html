@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Image</title>
+  <script type="text/javascript">
+        //Creatin an array and storing in the gim
+        var gim=new Array();
+        gim[0]=new Image(200,131);
+        gim[0].src="flow1.jpg";
+        gim[1]=new Image(200,131);
+        gim[1].src="flow2.jpg";
+        gim[2]=new Image(200,131);
+        gim[2].src="flow3.jpg";
+        gim[3]=new Image(200,131);
+        gim[3].src="flow4.jpg";
+    function pass(){
+        window.clearTimeout(time);
+    }
+    function play(){
+        time=setTimeout("slide()",2000);
+    }
+    function about(){
+        alert("hi");
+        window.location.href="page.htm";
+
+    }
+</script>
+</head>
+
+<body>
+
+<img src="flow1.jpg" alt="image" id="img" width="200" height="130" onclick="about()" onmouseover="pass()" onmouseout="play()" />
+<script type="text/javascript">
+//For the slide Show
+    var i =0;
+    function slide(){
+        if(i<3){
+            i++;
+            document.getElementById('img').src=gim[i].src;
+        }
+        else{
+            i=0;
+            document.getElementById('img').src=gim[i].src;
+
+        }
+     time = setTimeout("slide()",2000);
+    }
+    slide();
+</script>
+
+
+
+</body>
+
+</html>

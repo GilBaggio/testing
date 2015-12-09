@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>DOB</title>
+  <script type="text/javascript">
+  function age(){
+      var dob=document.form1.ag.value;
+      //var dd=getDate(dob);
+      alert(dob);
+      var mm=getMonth(dob);
+      var yyyy=getFullYear(dob);
+      alert(mm);
+      //var d= new date(yyyy,mm,dd,12,12,12,12,12);
+      //alert(d);
+      var cur=new Date();
+//      var er=cur-dob;
+      //alert(cur-dob);
+  }
+
+  </script>
+</head>
+
+<body>
+      <form name="form1" onsubmit="age()">
+      <input type="date" name="ag">
+      <input type="submit" value="Calage">
+
+      </form>
+      <div id="hu">
+
+      </div>
+</body>
+
+</html>
